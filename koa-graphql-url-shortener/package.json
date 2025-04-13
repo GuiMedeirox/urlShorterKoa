@@ -1,0 +1,26 @@
+{
+  "name": "koa-graphql-url-shortener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^13.1.0",
+    "apollo-server-koa": "^3.13.0",
+    "better-sqlite3": "^11.9.1",
+    "graphql": "^16.10.0",
+    "graphql-tag": "^2.12.6",
+    "koa": "^2.16.1",
+    "nanoid": "^5.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
