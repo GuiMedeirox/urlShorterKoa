@@ -5,7 +5,8 @@
  3. redirect to URL by shortcode
  4. list all shortened URLS
 
- so I wanna implement: 
+so I wanna implement: 
+
 5. auto-expirate logic of urls
 6. authentication to create custom short codes
 7. QRcode generation for URLS
