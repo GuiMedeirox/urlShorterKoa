@@ -6,6 +6,14 @@ const urlService: any = {
         const shortCode = generateRandomShortCode(6);
         await urlRepository.shortenUrl(url, shortCode);
         return shortCode;
+    },
+
+    getOriginalUrl: async (shortCode: string) => {
+        const url = await urlRepository.getOriginalUrl(shortCode);
+        if (!url) {
+            return null;
+        }
+        return url;
     }
 }
 

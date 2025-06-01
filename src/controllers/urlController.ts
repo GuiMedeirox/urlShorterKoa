@@ -4,10 +4,6 @@ import urlService from '../services/urlService.js';
 const router = new koaRouter();
 
   
-router.get('/', (ctx: any) => {
-  ctx.body = generateRandomShortCode(6);
-});
-
 router.post('/', async (ctx: any) => {
   const {originalUrl} = ctx.request.body;
 
@@ -15,6 +11,23 @@ router.post('/', async (ctx: any) => {
   ctx.body = {
     "shortCode": shortCode,
   }
+})
+
+router.get('/:shortCode', async (ctx: any) => {
+  const { shortCode } = ctx.params;
+  const originalUrl = await urlService.getOriginalUrl(shortCode);
+
+  if (!originalUrl) {
+    ctx.status = 404;
+    ctx.body = {
+      "message": "URL not found",
+    }
+    return;
+  }
+  
+  ctx.status = 302;
+  ctx.redirect(originalUrl);
+
 })
 
 export default router;
