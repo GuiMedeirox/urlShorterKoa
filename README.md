@@ -10,6 +10,6 @@ so I wanna implement:
 5. auto-expirate logic of urls
 6. authentication to create custom short codes
 7. QRcode generation for URLS
-8. use rate limiting;
+8. use rate limiting ✅;
 9. use graceful shutdown;
 10. implement, in a stress test, load balance w/ hash consistance algorithm

@@ -1,9 +1,10 @@
 import koaRouter, { url } from 'koa-router';
 import { generateRandomShortCode } from '../utils/generateRandomShortCode.js';
 import urlService from '../services/urlService.js';
+import { rateLimiter } from '../middlewares/rateLimiter.js';
 const router = new koaRouter();
 
-  
+router.use(rateLimiter(10, 1));
 router.post('/', async (ctx: any) => {
   const {originalUrl} = ctx.request.body;
 
