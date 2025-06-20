@@ -1,5 +1,4 @@
 import { PrismaClient } from '@prisma/client';
-import { generateRandomShortCode } from '../utils/generateRandomShortCode.js';
 const prisma = new PrismaClient();
 
 

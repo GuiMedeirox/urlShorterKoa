@@ -1,5 +1,4 @@
-import koaRouter, { url } from 'koa-router';
-import { generateRandomShortCode } from '../utils/generateRandomShortCode.js';
+import koaRouter from 'koa-router';
 import urlService from '../services/urlService.js';
 import { rateLimiter } from '../middlewares/rateLimiter.js';
 const router = new koaRouter();

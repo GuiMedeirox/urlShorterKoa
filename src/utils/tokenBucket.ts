@@ -3,9 +3,9 @@ export class TokenBucket {
     private lastRefill: number;
     
     constructor(
-        private capacity: number,     // max tokens
-        private refillRate: number,   // tokens per second
-        private refillInterval: number = 1000 // ms
+        private readonly capacity: number,     // max tokens
+        private readonly refillRate: number,   // tokens per second
+        private readonly refillInterval: number = 1000 // ms
     ) {
         this.tokens = capacity;
         this.lastRefill = Date.now();
