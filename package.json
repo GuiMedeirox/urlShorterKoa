@@ -1,0 +1,30 @@
+{
+  "type": "module",
+  "name": "url-shortener-koa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc --watch & node --watch ./app.js",
+    "build": "tsc",
+    "start": "node ./app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.0",
+  "dependencies": {
+    "@prisma/client": "6.8.2",
+    "graphql-http": "^1.22.4",
+    "koa": "^3.0.0",
+    "koa-bodyparser": "^4.4.1",
+    "koa-router": "^13.0.1"
+  },
+  "devDependencies": {
+    "@types/koa-router": "^7.4.8",
+    "prisma": "^6.8.2",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
